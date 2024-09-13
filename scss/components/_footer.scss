@@ -1,0 +1,194 @@
+.footer {
+    .footer-data {
+        padding: 65px 0 63px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: 1px solid $dim-blue;
+
+        @include media('<tablet') {
+            display: block;
+        }
+    }
+
+    .container {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .left-col {
+        display: block;
+        color: $dim-gray;
+        font-size: 16px;
+        line-height: 24px;
+        width: 26%;
+        letter-spacing: -.3px;
+
+        @include media('<widescreen') {
+            width: 30%;
+        }
+
+        @include media('<desktop') {
+            width: 50%;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+        }
+
+        @include media('<desktop') {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin: 0 0 33px;
+        }
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 32px;
+        width: 169px;
+
+        @include media('<tablet') {
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .footer-menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0 -16px;
+
+        @include media('<tablet') {
+            display: block;
+            column-count: 2;
+        }
+
+        li {
+            padding: 0 16px;
+
+            @include media('<tablet') {
+                margin-bottom: 20px;
+                break-inside: avoid;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $dark-purple;
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            transition: all .5s ease;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        .left-menu {
+            display: flex;
+
+            @include media('<tablet') {
+                display: block;
+                width: 50%;
+            }
+        }
+
+        .right-menu {
+            display: flex;
+
+            @include media('<tablet') {
+                display: block;
+                width: 50%;
+            }
+        }
+    }
+
+    .right-col {
+
+        .soon {
+            display: block;
+            color: $dim-gray;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .social-apps {
+
+            @include media('<tablet') {
+                display: flex;
+                gap: 30px;
+            }
+
+            span {
+                display: block;
+            }
+
+            .apple {
+                margin-bottom: 16px;
+
+                @include media('<tablet') {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .bottom-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 26px 0;
+
+        .copyright {
+            span {
+                font-size: 16px;
+                display: block;
+                color: $dim-gray;
+
+                @include media('<tablet') {
+                    line-height: 1.5;
+                }
+
+                @include media('<phone') {
+                    padding-right: 15px;
+                }
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            padding: 0;
+            margin: 0 -12px;
+            list-style: none;
+
+            li {
+                padding: 0 12px;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 26px;
+                color: $orange;
+                display: block;
+                transition: all .5s ease;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

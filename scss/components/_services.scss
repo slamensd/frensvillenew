@@ -1,0 +1,212 @@
+.service-block {
+    padding-top: 33px;
+    position: relative;
+    z-index: 9999;
+    margin-bottom: -215px;
+
+    @include media('<tablet') {
+        margin-bottom: -645px;
+    }
+
+    .container {
+        max-width: 1263px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .block-holder {
+        padding: 53px;
+        background: $white;
+        border: 3px solid $dim-sky-blue;
+        border-radius: 56px;
+
+        @include media('<widescreen') {
+            padding: 30px;
+        }
+
+        @include media('<desktop') {
+            padding: 15px 15px 40px 15px ;
+            border-radius: 22px;
+        }
+    }
+
+    .block-top-area {
+        display: flex;
+        margin: 0 -10px -16px -10px;
+    }
+
+    .text-area {
+        width: 47%;
+        font-size: 17px;
+        line-height: 26px;
+        padding: 0 10px;
+        font-weight: 600;
+
+        @include media('<desktop') {
+            width: 100%;
+        }
+
+        @include media('<tablet') {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .sub-title {
+            color: $orange;
+            font-size: 22px;
+            display: block;
+            margin-bottom: 21px;
+            line-height: 33px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: $dark-purple;
+            font-size: 80px;
+            line-height: 94px;
+            letter-spacing: -2.3px;
+            margin: 0 0 10px;
+            font-family: $lilita-one-font;
+
+            @include media('<desktop') {
+                line-height: 90px;
+                font-size: 60px;
+                letter-spacing: 0;
+            }
+
+            @include media('<desktop') {
+                font-size: 48px;
+                line-height: 60px;
+            }
+        }
+
+        .desktop-view {
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+
+        .mobile-view {
+            display: none;
+            @include media('<tablet') {
+                display: block;
+            }
+        }
+    }
+
+    .image-area {
+        width: 67%;
+        padding: 0 10px;
+        position: relative;
+        margin-right: -93px;
+
+        @include media('<desktop') {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            top: -97px;
+            right: -16px;
+        }
+    }
+
+    .services-data-wrap {
+        margin: 0 -10px;
+
+        @include media('<desktop') {
+            display: block;
+            padding: 0 14px;
+        }
+    }
+
+    .block-data {
+        padding: 0 61px 0 105px;
+        display: flex;
+        position: relative;
+        width: 50%;
+        margin-top: 46px;
+
+        @include media('<desktop') {
+            padding: 0 0 0 50px;
+            width: 100%;
+        }
+
+        @include media('<tablet') {
+            margin-top: 20px;
+        }
+
+        .img {
+            position: absolute;
+            display: inline-block;
+            left: 8px;
+            top: 0;
+            height: 40px;
+
+            @include media('<desktop') {
+                left: -7px;
+                width: 42px;
+                height: 24px;
+                margin-top: 7px;
+            }
+        }
+
+        &.pl {
+            margin-right: -70px;
+            margin-left: 55px;
+
+            @include media('<desktop') {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .block-data-wrap {
+        font-size: 17px;
+        line-height: 26px;
+
+        @include media('<desktop') {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .title {
+            font-size: 30px;
+            line-height: 38px;
+            color: $dark-purple;
+            display: block;
+            margin-bottom: 18px;
+            font-family: $lilita-one-font;
+
+            @include media('<desktop') {
+                font-size: 24px;
+                margin: 0 0 12px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .blocks-wrap {
+        display: flex;
+
+        @include media('<desktop') {
+            display: block;
+        }
+        
+    }
+
+    .block-mobile-image {
+        display: none;
+
+        @include media('<desktop') {
+            display: flex;
+            margin-top: 35px;
+            justify-content: center;
+            margin-bottom: -134px;
+        }
+    }
+}

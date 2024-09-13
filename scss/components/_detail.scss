@@ -1,0 +1,168 @@
+.detail-block {
+    background: $sky-blue;
+    padding-top: 264px;
+    position: relative;
+    padding-bottom: 102px;
+
+    @include media('<widescreen') {
+        padding-top: 385px;
+    }
+            
+    @include media('<tablet') {
+        padding-bottom: 0;
+        padding-top: 800px;
+    }
+    
+    .container {
+        max-width: 1263px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .detail-block-area {
+        display: flex;
+        position: relative;
+            
+        @include media('<tablet') {
+            position: static;
+            flex-direction: column;
+        }
+    }
+
+    .detail-img {
+        position: absolute;
+        bottom: -103px;
+        right: -210px;
+        
+        @include media('<widescreen') {
+            right: -145px;
+        }
+            
+        @include media('<tablet') {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            position: static;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+            
+        @include media('<widescreen') {
+            width: 85%;
+        }
+            
+        @include media('<desktop') {
+            width: 65%;
+        }
+            
+        @include media('<tablet') {
+            width: 100%;
+        }
+
+        .heli {
+            position: absolute;
+            top: 84px;
+            left: 37%;
+            
+            @include media('<desktop') {
+                display: none;
+            }
+        }
+    }
+    
+    .data-wrap {
+        margin-bottom: 33px;
+        font-size: 17px;
+        line-height: 26px;
+        color: $dark-blue;
+    }
+
+    .detail-data {
+        width: 52%;
+            
+        @include media('<desktop') {
+            width: 70%;
+        }
+            
+        @include media('<tablet') {
+            width: 100%;
+        }
+            
+        @include media('<widescreen') {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        h2 {
+            font-family: $lilita-one-font;
+            font-size: 88px;
+            color: $orange;
+            letter-spacing: -2.3px;
+            line-height: 90px;
+            margin-bottom: 64px;
+            
+            @include media('<widescreen') {
+                font-size: 65px;
+                line-height: 70px;
+                letter-spacing: 0;
+                margin-bottom: 40px;
+            }
+            
+            @include media('<desktop') {
+                font-size: 46px;
+                letter-spacing: .9px;
+                line-height: 50px;
+                margin-bottom: 20px;
+            }
+            
+            @include media('<tablet') {
+                font-size: 36px;
+                line-height: 45px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .title {
+            color: $dark-blue;
+            font-size: 36px;
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: -.7px;
+            line-height: 44px;
+            font-family: $lilita-one-font;
+            
+            @include media('<widescreen') {
+                font-size: 28px;
+                line-height: 30px;
+                letter-spacing: 0;
+            }
+            
+            @include media('<tablet') {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .parent-count {
+            font-weight: 700;
+        }
+
+        .pr {
+            padding-right: 130px;
+            
+            @include media('<tablet') {
+                padding: 0;
+            }
+        }
+    }
+}

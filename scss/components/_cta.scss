@@ -1,0 +1,124 @@
+.cta-section {
+    background-color: $blue;
+    padding: 97px 0;
+
+    @include media('<tablet') {
+        padding: 54px 0;
+    }
+
+    .container {
+        max-width: 1246px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .cta-data-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include media('<tablet') {
+            flex-direction: column;
+        }
+    }
+
+    .cta-text {
+        font-size: 22px;
+        line-height: 33px;
+        color: $body-color;
+        width: 46%;
+
+        @include media('<tablet') {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h2 {
+            color: $white;
+            font-size: 36px;
+            line-height: 43px;
+            font-weight: 700;
+        }
+    }
+
+    .input-wrap {
+        width: 43%;
+        display: flex;
+        justify-content: space-between;
+
+        @include media('<widescreen') {
+            justify-content: space-around;
+        }
+
+        @include media('<desktop') {
+            display: block;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+        }
+
+        .input-area {
+            width: 69%;
+
+            @include media('<widescreen') {
+                width: 55%;
+            }
+
+            @include media('<desktop') {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        input {
+            background: $white;
+            padding: 10px 15px;
+            width: 100%;
+            margin-bottom: 6px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 100px;
+
+            &::placeholder {
+                color: $dark-purple;
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+        }
+
+        .privacy {
+            display: block;
+            color: $sky-blue;
+            letter-spacing: -.6px;
+            font-size: 14px;
+            line-height: 20px;
+            
+            @include media('<widescreen') {
+                font-size: 12px;
+            }
+        }
+
+        .policy {
+            color: $sky-blue;
+            text-decoration: none;
+            border-bottom: 1px solid $sky-blue;
+
+            &:hover {
+                border: none;
+            }
+        }
+
+        .btn {
+            padding: 14px 18px;
+
+            @include media('<desktop') {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,216 @@
+.visual-area {
+  padding: 96px 0 144px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  
+  @include media('<largescreen') {
+    margin-bottom: -96px;
+  }
+
+  @include media('<tablet') {
+    padding: 20px 0 120px;
+  }
+
+  @include media('<phone') {
+    background-image: url('../images/bg-banner-mob.png') !important;
+    background-size: cover;
+  }
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .visual-holder {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media('<desktop') {
+          display: block;
+        }
+    }
+
+    .text-holder {
+        color: $black;
+        font-size: 17px;
+        line-height: 26px;
+        width: 42%;
+        margin-right: 47px;
+        margin-left: 30px;
+
+        @include media('<desktop') {
+          width: 100%;
+          margin: 0;
+          margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0 0 36px;
+            font-size: 68px;
+            color: $white;
+            line-height: 100%;
+            letter-spacing: -.6px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: $lilita-one-font;
+
+            @include media('<widescreen') {
+              font-size: 48px;
+              margin-bottom: 20px;
+              line-height: 58px;
+            }
+
+            @include media('<desktop') {
+              font-size: 36px;
+              line-height: 44px;
+            }
+        }
+
+        p {
+            margin: 0 0 42px;
+        }
+
+        .multi-data-warp {
+            position: relative;
+
+            .arrow-img {
+                position: absolute;
+                left: -83px;
+                top: -23px;
+
+                @include media('<largescreen') {
+                  display: none;
+                }
+            }
+
+            .btn {
+              font-size: 22px;
+              padding: 16px 23px;
+            }
+        }
+    }
+
+    .image-holder {
+        width: 63%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 28px -118px 0 0;
+        position: relative;
+
+        @include media('<desktop') {
+          width: 100%;
+          justify-content: center;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .bear-img {
+          position: absolute;
+          bottom: -294px;
+          right: -8px;
+        }
+    }
+}
+
+.banner-video {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  position: relative;
+  padding: 25px;
+  transform: rotate(-4deg);
+  margin-right: -19px;
+
+  @include media('<largescreen') {
+    margin: 0;
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: url('../images/frame-holder.png') no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    display: block;
+  }
+
+  .sub-image {
+    position: absolute;
+    left: 48%;
+    top: 99%;
+    width: 371px;
+    height: 371px;
+    transform: rotate(4deg);
+
+    @include media('<largescreen') {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .play-btn {
+    width: 106px;
+    height: 106px;
+    border: 6px solid #fff;
+    border-radius: 100%;
+    background: rgba(91,165,218, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    padding-left: 15px;
+    transition: all 0.4s ease;
+
+    @include media('<tablet') {
+      width: 60px;
+      height: 60px;
+      padding-left: 5px;
+    }
+
+    &:hover {
+      background: rgba(91,165,218, 1);
+    }
+
+    i {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      border-left: 38px solid #fff;
+      border-right: 0;
+
+      @include media('<tablet') {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 19px solid #fff;
+      }
+    }
+  }
+}

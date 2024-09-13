@@ -1,0 +1,200 @@
+.about-area {
+    padding: 0 0 70px;
+
+    @include media('<desktop') {
+      padding: 80px 0 70px;
+    }
+
+    @include media('<tablet') {
+      padding: 50px 0 22px;
+    }
+
+    .container {
+        max-width: 1263px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 78px;
+        font-family: $lilita-one-font;
+        text-align: center;
+        color: $orange;
+        max-width: 1111px;
+        margin: 0 auto 85px auto;
+        line-height: 80px;
+        letter-spacing: -1px;
+
+        @include media('<widescreen') {
+            font-size: 60px;
+            line-height: 1.1;
+            letter-spacing: 0;
+            margin-bottom: 60px;
+        }
+
+        @include media('<tablet') {
+            font-size: 36px;
+            line-height: 1.1;
+            letter-spacing: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    .about-data-holder {
+        display: flex;
+        align-items: center;
+        margin-bottom: 19px;
+        justify-content: space-between;
+
+        @include media('<tablet') {
+            display: block;
+        }
+
+        &:last-child {
+            margin-bottom: 15px;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+            margin-bottom: 45px;
+
+            .image-area {
+                justify-content: flex-start;
+                width: 57%;
+                margin-top: -20px;
+
+                @include media('<tablet') {
+                    width: 100%;
+                    margin-top: 50px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+
+            .text-area {
+                width: 35%;
+                margin-right: -13px;
+                padding-top: 35px;
+                padding-left: 13px;
+
+                @include media('<desktop') {
+                    width: 50%;
+                }
+
+                @include media('<tablet') {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+
+        .image-area {
+            width: 55%;
+            display: flex;
+            justify-content: flex-end;
+            margin: -5px -23px 0 0;
+            
+            @include media('<widescreen') {
+                width: 60%;
+                height: max-content;
+                margin: 0;
+            }
+
+            @include media('<desktop') {
+                width: 50%;
+            }
+
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+
+    .text-area {
+        color: $light-purple;
+        font-size: 18px;
+        line-height: 26px;
+        width: 34%;
+
+        @include media('<desktop') {
+            width: 50%;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 36px;
+            line-height: 44px;
+            font-family: $lilita-one-font;
+            color: $dim-blue;
+            display: block;
+            margin-bottom: 15px;
+            letter-spacing: -.7px;
+
+            @include media('<tablet') {
+              font-size: 30px;
+              line-height: 38px;
+              letter-spacing: .9px;
+            }
+        }
+
+        p {
+            margin: 0 0 41px;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    .about-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 36px;
+
+            .sub-title {
+                font-weight: 700;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .mark-icon {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+
+            img {
+                height: auto;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &.mobile-none {
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+
+        &.desktop-none {
+            display: none;
+            @include media('<tablet') {
+                display: block;
+            }
+        }
+    }
+}

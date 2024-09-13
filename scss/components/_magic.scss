@@ -1,0 +1,242 @@
+.magic-blocks {
+    padding-top: 8px;
+
+    .block-heading {
+        color: $dark-purple;
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-bottom: 62px;
+        text-align: center;
+
+        @include media('<tablet') {
+            font-size: 22px;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: $blue;
+            margin: 0 0 20px;
+            font-size: 78px;
+            line-height: 89px;
+            letter-spacing: -.9px;
+            text-align: center;
+            font-family: $lilita-one-font;
+            text-transform: uppercase;
+
+            @include media('<widescreen') {
+                font-size: 60px;
+                line-height: 1.1;
+                letter-spacing: 0;
+            }
+
+            @include media('<tablet') {
+                font-size: 36px;
+                line-height: 1.1;
+                letter-spacing: 0;
+            }
+        }
+        
+        p {
+            margin: 0 0 20px;
+
+            br {
+                @include media('<tablet') {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .container {
+        max-width: 1232px;
+    }
+}
+    
+.magic-slider-area {
+    position: relative;
+    margin-right: calc((100vw - 1232px) / -2);
+
+    @include media('<widescreen') {
+        margin-right: -15px;
+    }
+}
+
+.magic-slider-holder {
+    position: relative;
+    margin-left: -15px;
+    
+    @include media('<largescreen') {
+        margin-left: 0;
+    }
+
+    @include media('<tablet') {
+        margin-left: -15px;
+    }
+
+    .slick-list {
+        padding: 0 620px 112px 0;
+        margin: 0 -24px;
+
+        @include media('<tv-screen') {
+            padding: 0 425px 112px 0;
+        }
+
+        @include media('<largescreen') {
+            padding: 0 260px 112px 0;
+        }
+
+        @include media('<widescreen') {
+            padding: 0 200px 112px 0;
+        }
+
+        @include media('<desktop') {
+            padding: 0 150px 70px 0;
+        }
+
+        @include media('<tablet') {
+            padding: 0 0 34px;
+            margin: 0;
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    .slide {
+        padding: 0 24px;
+        height: auto;
+
+        @include media('<tablet') {
+            padding: 0 15px;
+        }
+
+        &:nth-child(even) {
+            .slide-holder {
+                background: #ebe9fe;
+
+                &:before {
+                    background: linear-gradient(to right, #b980cf 0%,#5b208a 100%);
+                }
+
+                .description {
+                    h2 {
+                        color: #6b3196;
+
+                        span {
+                            color: #1d2939;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.magic-slider {
+    .slide-holder {
+        background: $light-cyan;
+        border-radius: 72px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 63px 28px 63px 40px;
+
+        @include media('<tablet') {
+            border-radius: 22px;
+            display: block;
+            padding: 40px 30px;
+        }
+
+        &:before {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: -9999;
+            right: -24px;
+            bottom: -24px;
+            border-radius: 72px;
+            background: linear-gradient(to bottom, $gradient-cyan-top 0%, $gradient-cyan-bottom 100%);
+            content: '';
+
+            @include media('<tablet') {
+                right: 0;
+                bottom: -14px;
+                border-radius: 22px;
+            }
+        }
+    }
+
+    .image {
+        margin-right: 55px;
+
+        @include media('<widescreen') {
+            width: 45%;
+            margin-right: 30px;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+
+            @include media('<tablet') {
+                width: 100%;
+                max-width: inherit;
+            }
+        }
+    }
+
+    .description {
+        flex-basis: 0;
+        flex-grow: 1;
+        min-width: 0;
+        color: #475467;
+        font-size: 17px;
+        line-height: 1.5;
+
+        @include media('<desktop') {
+            font-size: 14px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 60px;
+            line-height: 1.1;
+            font-family: $lilita-one-font;
+            display: block;
+            color: #1DB9AE;
+            font-weight: normal;
+            letter-spacing: -2px;
+            margin: 0 0 27px;
+
+            @include media('<desktop') {
+                font-size: 44px;
+            }
+
+            @include media('<tablet') {
+                font-size: 30px;
+                margin: 0 0 10px;
+                letter-spacing: -0.5px;
+            }
+
+            span {
+                display: block;
+                color: #1d2939;
+            }
+        }
+    }
+}
+

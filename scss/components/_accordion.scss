@@ -1,0 +1,142 @@
+.accordion-area {
+    padding: 28px 0 69px;
+
+    .container {
+        max-width: 894px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .accordion-heading {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 35px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        color: $dim-gray;
+        
+        @include media('<tablet') {
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        h2 {
+            font-size: 112px;
+            font-family: $lilita-one-font;
+            color: $orange;
+            line-height: 90px;
+            margin-bottom: 28px;
+            
+            @include media('<tablet') {
+                font-size: 48px;
+                line-height: 60px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .accordion-data {
+        border-bottom: 1px solid $dim-gray;
+        padding-bottom: 38px;
+        padding-top: 23px;
+        
+        &:last-child {
+            border: none;
+        }
+        
+        .accordion {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 0 -6px;
+            
+            @include media('<phone') {
+                margin-bottom: 10px;
+            }
+        }
+
+        .accordion-title {
+            color: $blue;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 33px;
+            cursor: pointer;
+            flex-grow: 1;
+
+            @include media('<tablet') {
+                font-size: 17px;
+                line-height: 26px;
+                padding-right: 65px;
+            }
+            @include media('<phone') {
+                padding-right: 50px;
+            }
+        }
+
+        .accordion-opener {
+            width: 47px;
+            height: 47px;
+            flex-shrink: 0;
+            border: 1px solid $blue;
+            background: $dim-blue;
+            border-radius: 100%;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+
+            &::after,
+            &::before {
+                position: absolute;
+                background: $white;
+                width: 18px;
+                height: 3px;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-90deg);
+                transition: 0.3s;
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            &.accordion-active {
+                &::before {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+            }
+        } 
+    }
+
+    .accordion-para {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -.5px;
+        display: none;
+        transition: display 0.25s;
+        color: #667085;
+
+        @include media('<desktop') {
+            padding-right: 50px;
+        }
+
+        @include media('<tablet') {
+            padding-top: 20px;
+        }
+
+        @include media('<phone') {
+            padding-right: 87px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
