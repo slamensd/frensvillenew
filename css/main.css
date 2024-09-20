@@ -1341,7 +1341,7 @@ input {
   bottom: 0;
   right: 0;
   content: "";
-  
+  background: url("../images/frame-holder.png") no-repeat;
   background-size: 100% 100%;
 }
 .banner-video .img {
