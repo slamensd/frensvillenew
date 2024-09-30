@@ -114,7 +114,7 @@ input {
 	}
 }
 
-@include media('>=desktop') {
+// @include media('>=desktop') {
 	.animate-bottom,
 	.animate-right,
 	.animate-left {
@@ -146,7 +146,7 @@ input {
 			right: 0;
 		}
 	}
-}
+// }
 
 @import 'components/header';
 @import 'components/cta';

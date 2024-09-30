@@ -2,10 +2,7 @@ jQuery(function() {
 	initMobileNav();
 	initAccordion();
 	initSlickCarousel();
-
-	if (window.innerWidth > 1023) {
-		AOS.init();
-	}
+	AOS.init();
 
 	jQuery(window).resize(function() {
 		if (jQuery(window).width() === 1024) {

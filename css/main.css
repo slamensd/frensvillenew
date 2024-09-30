@@ -730,35 +730,37 @@ input {
   background: linear-gradient(to top, #0086c9 0%, #36BFFA 100%);
 }
 
-@media (min-width: 1024px) {
-  .animate-bottom,
-  .animate-right,
-  .animate-left {
-    -webkit-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    position: relative;
-  }
-  .animate-bottom {
-    top: -100px;
-  }
-  .loaded .animate-bottom {
-    top: 0;
-  }
-  .animate-right {
-    left: -100px;
-  }
-  .loaded .animate-right {
-    left: 0;
-  }
-  .animate-left {
-    right: -100px;
-  }
-  .loaded .animate-left {
-    right: 0;
-  }
+.animate-bottom,
+.animate-right,
+.animate-left {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  position: relative;
 }
+
+.animate-bottom {
+  top: -100px;
+}
+.loaded .animate-bottom {
+  top: 0;
+}
+
+.animate-right {
+  left: -100px;
+}
+.loaded .animate-right {
+  left: 0;
+}
+
+.animate-left {
+  right: -100px;
+}
+.loaded .animate-left {
+  right: 0;
+}
+
 .header {
   padding: 50px 0 50px;
   background: #f5fbff;
